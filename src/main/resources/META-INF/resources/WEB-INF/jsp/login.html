@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Todos Page</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>Is Done?</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${todos}" var="todo">
+        <tr>
+            <td>${todo.id}</td>
+            <td>${todo.description}</td>
+            <td>${todo.targetDate}</td>
+            <td>${todo.done}</td>
+        </tr>
+    </c:forEach>
+
+    </tbody>
+</table>
+<div>Welcome to ToDo App</div>
+<div>Your ToDos are ${todos}</div>
+</body>
+</html>
